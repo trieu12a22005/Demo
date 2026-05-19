@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plants vs Zombies Fan Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #7ed957, #2e8b57);
+      color: #fff;
+    }
+
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffeb3b;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 8%;
+      gap: 40px;
+    }
+
+    .hero-content {
+      max-width: 550px;
+    }
+
+    .hero-content h1 {
+      font-size: 55px;
+      margin-bottom: 20px;
+      color: #ffeb3b;
+      text-shadow: 3px 3px 0 #1b5e20;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #1b5e20;
+      background: #ffeb3b;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .btn-secondary {
+      background: #fff;
+    }
+
+    .hero-img img {
+      width: 430px;
+      max-width: 100%;
+      filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+      animation: float 3s ease-in-out infinite;
+      border-radius: 20px;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #ffeb3b;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .card img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #ffeb3b;
+      margin-bottom: 10px;
+    }
+
+    .download {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .download p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .popup {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      background: #fff;
+      color: #1b5e20;
+      padding: 18px 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+      display: none;
+      font-weight: bold;
+      z-index: 99;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 40px;
+      }
+
+      .btn-group {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">🌻 Plant Zombie</div>
+
+    <nav>
+      <a href="#home">Trang chủ</a>
+      <a href="#features">Tính năng</a>
+      <a href="#download">Download</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Plants vs Zombies</h1>
+      <p>
+        Plants vs Zombies là tựa game thủ thành vui nhộn, nơi bạn sử dụng các loài cây
+        đặc biệt để bảo vệ khu vườn khỏi đội quân zombie hài hước nhưng nguy hiểm.
+      </p>
+
+      <div class="btn-group">
+        <a href="#download" class="btn">Tải game ngay</a>
+        <button class="btn btn-secondary" onclick="showInfo()">Xem giới thiệu</button>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <img 
+        src="https://upload.wikimedia.org/wikipedia/en/9/9c/Plants_vs._Zombies_logo.png" 
+        alt="Plants vs Zombies Logo"
+      />
+    </div>
+  </section>
+
+  <section id="features">
+    <h2 class="section-title">Điểm nổi bật</h2>
+
+    <div class="features">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Plant icon">
+        <h3>Nhiều loại cây</h3>
+        <p>Sử dụng hoa hướng dương, đậu bắn, bom anh đào và nhiều loại cây đặc biệt khác.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616554.png" alt="Zombie icon">
+        <h3>Zombie đa dạng</h3>
+        <p>Mỗi loại zombie có khả năng riêng, khiến người chơi phải tính toán chiến thuật.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Game icon">
+        <h3>Lối chơi chiến thuật</h3>
+        <p>Sắp xếp cây hợp lý để phòng thủ và vượt qua từng màn chơi ngày càng khó.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/686/686589.png" alt="Fun icon">
+        <h3>Đồ họa vui nhộn</h3>
+        <p>Phong cách hoạt hình dễ thương, âm thanh hài hước và phù hợp với mọi lứa tuổi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="download" id="download">
+    <h2 class="section-title">Tải Plants vs Zombies</h2>
+
+    <p>
+      Nhấn vào nút bên dưới để tải game. Đây là link giả dùng để minh họa cho giao diện
+      trang web giới thiệu game.
+    </p>
+
+    <a href="https://example.com/download/plants-vs-zombies" class="btn" onclick="downloadGame(event)">
+      Download Game
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2026 Plant Zombie Fan Page. Website demo HTML CSS JavaScript.</p>
+  </footer>
+
+  <div class="popup" id="popup">
+    Đây là trang giới thiệu game Plants vs Zombies!
+  </div>
+
+  <script>
+    function showInfo() {
+      const popup = document.getElementById("popup");
+
+      popup.textContent = "Plants vs Zombies là game thủ thành nổi tiếng với cây trồng và zombie vui nhộn!";
+      popup.style.display = "block";
+
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 3000);
+    }
+
+    function downloadGame(event) {
+      event.preventDefault();
+
+      const popup = document.getElementById("popup");
+
+      popup.textContent = "Đang chuyển đến link download giả...";
+      popup.style.display = "block";
+
+      setTimeout(() => {
+        window.location.href = "https://example.com/download/plants-vs-zombies";
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
