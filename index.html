@@ -115,6 +115,7 @@
       0%, 100% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-15px);
       }
@@ -247,8 +248,8 @@
     </div>
 
     <div class="hero-img">
-      <img 
-        src="https://upload.wikimedia.org/wikipedia/en/9/9c/Plants_vs._Zombies_logo.png" 
+      <img
+        src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/cac_loai_cay_trong_plants_vs_zombie_e73c010cbf.jpg"
         alt="Plants vs Zombies Logo"
       />
     </div>
@@ -288,13 +289,17 @@
     <h2 class="section-title">Tải Plants vs Zombies</h2>
 
     <p>
-      Nhấn vào nút bên dưới để tải game. Đây là link giả dùng để minh họa cho giao diện
-      trang web giới thiệu game.
+      Nhấn vào nút bên dưới để tải game. Link này sẽ chuyển đến file Google Drive của bạn.
     </p>
 
-    <a href="https://example.com/download/plants-vs-zombies" class="btn" onclick="downloadGame(event)">
+    <a
+      href="https://drive.google.com/file/d/1VYtFqutHomA3Vgg1UZVbAypnVJABnkTq/view?usp=drive_link"
+      class="btn"
+      onclick="downloadGame(event)"
+    >
       Download Game
     </a>
+    <p>Mật khẩu: 123456</p>
   </section>
 
   <footer>
@@ -320,13 +325,14 @@
     function downloadGame(event) {
       event.preventDefault();
 
+      const downloadUrl = "https://drive.google.com/file/d/1VYtFqutHomA3Vgg1UZVbAypnVJABnkTq/view?usp=drive_link";
       const popup = document.getElementById("popup");
 
-      popup.textContent = "Đang chuyển đến link download giả...";
+      popup.textContent = "Đang chuyển đến link download...";
       popup.style.display = "block";
 
       setTimeout(() => {
-        window.location.href = "https://example.com/download/plants-vs-zombies";
+        window.location.href = downloadUrl;
       }, 1500);
     }
   </script>
